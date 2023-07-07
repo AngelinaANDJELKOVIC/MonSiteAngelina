@@ -1,0 +1,603 @@
+/*
+Thème Name: ANDANG
+*/
+/**/
+body {
+    font-family: 'Waiting for the Sunrise', cursive; 
+    font-size:30px; 
+    margin: 0;
+	padding: 0;
+    letter-spacing: 6px; 
+    font-weight: bold;
+    height: 100%;
+}
+
+*{
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+html{
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+}
+
+/**/
+header {
+    background-color: #FFFFFF;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5px;
+    z-index: 5;
+    height: 80px;
+}
+
+
+header nav{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+header nav a {
+    display: block;
+    text-decoration: none;
+    color: black;
+    font-weight: 400;
+    width: 160px;
+}
+
+#header_nav {
+    border-bottom: 1px solid rgba(245,238,230,.5);
+}
+
+.videologo{
+	width:70px;
+	height:70px;
+	object-fit: cover;
+}
+
+@media screen and (max-width: 700px) {
+    header {
+    top: 0;
+    }
+    .nav {
+        display: none;
+    }
+    html #wpadminbar {
+        z-index: 0;
+    }
+}
+
+/*SECTION 1*/
+.sectionone {
+    width: 100%;
+    height: 100%;
+}
+#idvideo {
+    width: 100%;
+    height: 100%;
+    top: -29px;
+    position: relative;
+}
+
+#poster {
+    z-index: 99999;
+    width: 100%;
+    height: 100%;
+}
+
+.bannerimg {
+    width: 50%;
+}
+
+.banner {
+    position: absolute;
+    top: 250px;
+    left: 550px;
+    z-index: 1;
+}
+
+@media screen and (max-width: 500px) {
+.banner {
+    top: 165px;
+    left: 133px;
+}
+
+}
+/*SECTION 2*/
+#moi {
+    padding: 100px 15px;
+}
+
+.center {
+    text-align: center;
+}
+
+p {
+    transform: scale(0.90);
+    animation: scale 10s forwards cubic-bezier(0.5, 1, 0.89, 1);
+}
+    @keyframes scale {
+    100% {
+    transform: scale(1);
+    }
+}
+
+.floating {
+	animation: floating 6s ease-in-out 0s infinite;
+}
+
+#typedtext {
+    font-size: 30px;
+}
+
+.hidden {
+    display: none;
+}
+
+p {
+    animation-duration: 2s;
+    animation-name: glissement;
+    /*animation-iteration-count: infinite;*/
+}
+
+.aller {
+    animation-direction: normal;
+}
+@keyframes glissement {
+from {
+    margin-left: 100%;
+    width: 300%;
+}
+
+to {
+    margin-left: 0%;
+    width: 100%;
+}
+}
+
+.CV {
+    text-decoration: none;
+    color: black;
+    animation: flash 1.2s linear infinite;
+    }
+@keyframes flash {
+    0% {
+        color: #87CEEB;
+        text-shaddow: 0 0 7px #87CEEB;
+    }
+    90% {
+        color: black;
+        text-shaddow: none;
+    }
+    100% {
+        color: #87CEEB;
+        text-shaddow: 0 0 7px #87CEEB;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    div#typedtext {
+        font-size: 15px;
+    }
+    p {
+    font-size: 11px;
+    }
+    #moi {
+        padding: 12px 15px;
+    }
+}
+/*SECTION 3*/
+
+section#competence{
+    padding: 100px 15px;
+}
+:root{
+    --background-dark: #2d3548;
+    --text-light: rgba(255,255,255,0.6);
+    --text-lighter: rgba(255,255,255,0.9);
+    --spacing-s: 8px;
+    --spacing-m: 16px;
+    --spacing-l: 24px;
+    --spacing-xl: 32px;
+    --spacing-xxl: 64px;
+    --width-container: 1200px;
+}
+
+.hero-section{
+    align-items: flex-start;
+    background-image: linear-gradient(15deg, #EDEFEE 0%, #18A7BE 150%);
+    display: flex;
+    min-height: 100%;
+    justify-content: center;
+    padding: var(--spacing-xxl) var(--spacing-l);
+}
+
+.card-grid{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-column-gap: var(--spacing-l);
+    grid-row-gap: var(--spacing-l);
+    max-width: var(--width-container);
+    width: 100%;
+}
+
+@media(min-width: 540px){
+    .card-grid{
+    grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+@media(min-width: 960px){
+    .card-grid{
+    grid-template-columns: repeat(5, 1fr); 
+    }
+}
+
+.card{
+    list-style: none;
+    position: relative;
+}
+
+.one {
+    animation: fadein 2s;
+    -moz-animation: fadein 2s; /* Firefox */
+    -webkit-animation: fadein 2s; /* Safari et Chrome */
+    -o-animation: fadein 2s; /* Opera */
+}
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+.two {
+    animation: fadein 3s;
+    -moz-animation: fadein 3s; /* Firefox */
+    -webkit-animation: fadein 3s; /* Safari et Chrome */
+    -o-animation: fadein 3s; /* Opera */
+}
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+.three {
+    animation: fadein 4s;
+    -moz-animation: fadein 4s; /* Firefox */
+    -webkit-animation: fadein 4s; /* Safari et Chrome */
+    -o-animation: fadein 4s; /* Opera */
+}
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+.four {
+    animation: fadein 5s;
+    -moz-animation: fadein 5s; /* Firefox */
+    -webkit-animation: fadein 5s; /* Safari et Chrome */
+    -o-animation: fadein 5s; /* Opera */
+}
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+.five {
+    animation: fadein 6s;
+    -moz-animation: fadein 6s; /* Firefox */
+    -webkit-animation: fadein 6s; /* Safari et Chrome */
+    -o-animation: fadein 6s; /* Opera */
+}
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+
+.card:before{
+    content: '';
+    display: block;
+    padding-bottom: 150%;
+    width: 100%;
+}
+
+.card__background{
+    background-size: cover;
+    background-position: center;
+    border-radius: var(--spacing-l);
+    bottom: 10px;
+    left: 5px;
+    position: absolute;
+    right: 5px;
+    top: 10px;
+    transform-origin: center;
+    transform: scale(1) translateZ(0);
+    transition: filter 200ms linear, transform 200ms linear;
+}
+
+.card:hover .card__background{
+    transform: scale(1.05) translateZ(0);
+}
+
+.card-grid:hover > .card:not(:hover) .card__background{
+    filter: brightness(0.5) saturate(0) contrast(1.2) blur(20px);
+}
+
+.card__content{
+    left: 0;
+    padding: var(--spacing-l);
+    position: absolute;
+    top: 0;
+}
+.comp {
+    color: white;
+}
+
+
+
+@media screen and (max-width: 500px) {
+    .comp {
+        font-size: 15px;
+        margin-top: -75px;
+    }
+    div.card-grid.retour {
+        width: 150px;
+    }
+}
+
+/**/
+/*Apparition section par section*/
+.section-fade-in{
+	opacity:0;
+	transition: opacity 1s ease-in;
+}
+.section-fade-in.show{
+	opacity:1;
+}
+
+
+.zoom-in-out-box {
+    animation: zoom-in-zoom-out 2s ease;
+}
+
+@keyframes zoom-in-zoom-out {
+    0% {
+    transform: scale(1, 1);
+    }
+    50% {
+    transform: scale(1.5, 1.5);
+    }
+    100% {
+    transform: scale(1, 1);
+    }
+}
+
+.card-grid {
+    animation-duration: 1s;
+    animation-name: glissement;
+}
+.retour {
+    animation-direction: alternate-reverse;
+}
+/*SECTION PROJETS*/
+video#videoprojet0 {
+    width: 619px;
+}
+
+video#videoprojet {
+    width: 400px;
+}
+
+section.section-fade-in.show {
+align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.bouton {
+    color: black;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    margin-left: 516px;
+  }
+  
+  .bouton:hover {
+    background-color: ;
+  }
+
+
+/*SECTION CONTACT*/
+
+section#contact {
+background-color: #f9f9fb;
+padding: 100px 15px;
+}
+
+
+div.container {
+max-width: 900px;
+margin: 0px auto;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: center;
+background-color: white;
+padding: 60px 10px;
+border-radius: 15px;
+box-sizing: border-box;
+box-shadow: rgb(214 214 214) 0px 10px 50px -10px #d6d6d6;
+}
+
+h2#contact {
+    font-size: 2.8em;
+    text-align: center;
+    color: black;
+    margin-bottom: 60px;
+}
+
+form {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+max-width: 600px;
+}
+
+form input {
+width: 45%;
+}
+
+form input:hover,
+form textarea:hover {
+border-bottom: 2px solid #ADD8E6;
+}
+
+form textarea {
+width: 100%;
+resize: none;
+height: 100px;
+margin-bottom: 60px;
+}
+
+form input,
+form textarea {
+    margin: 15px 0;
+    padding: 10px;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #e4e4ec;
+    transition: 0.2s;
+}
+
+form button {
+    width: 192px;
+    height: 50px;
+    border-radius: 8px;
+    border: none;
+    background-color: #ADD8E6;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2em;
+    cursor: pointer;
+    outline: none;
+    margin: 0 auto;
+    transform: 0.2s;
+}
+
+form button:hover {
+    transform: translateY(-2px);
+    box-shadow: rgb(214 214 214) 0px 10px 20px 0px #d6d6d6;
+}
+
+.fade-in {
+    opacity: 1;
+}
+
+@media screen and (max-width: 500px) {
+    form {
+        flex-direction: column;
+        width: 95%;
+        }
+    form input {
+        width: 100%;
+        }
+    h2#contact {
+        font-size: 2em;
+    }
+}
+
+/*SLIDE PAGE*/
+
+
+#slide1 {
+	background:url(https://media.istockphoto.com/id/1015738278/fr/vectoriel/mer-vague-sans-soudure-jet-horizontal-dans-un-style-oriental-vintage-ukiyo-e-illustration.jpg?s=170667a&w=0&k=20&c=a7l8Nn2MWD9fBUvvJEgKJ5cgCgLRSBYHu4OKPNSMAHo=) center 0 no-repeat fixed;	
+    background-size: 100%;
+    padding-top:100px;
+}
+
+
+/* Gestion du contenu */
+.slide_inside {
+	margin: 0 auto;
+}
+
+@media screen and (max-width: 500px) {
+    #slide1 {
+        background-size: 153%;
+        padding-top: 63px;
+    }
+    }
+
+/**/
+.anim1 {
+	transition: bottom 1.5s ease-in;
+	position: relative;
+	bottom:-30px;
+}
+
+
+
+
+
+/*FOOTER*/
+footer {
+    background-color: #FFFFFF;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5px;
+    z-index: 5;
+    height: 80px;
+}
+
+
+footer nav{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+footer nav a {
+    display: block;
+    text-decoration: none;
+    color: black;
+    font-weight: 400;
+}
+
+
+
+
